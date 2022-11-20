@@ -178,7 +178,7 @@ class _homepageState extends State<homepage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    // Image.network(iconId),
+                    // Image.network((iconId == null? "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg":iconId)),
                     // Image(image: NetworkImage(iconId)),
                     // NetworkImage(iconId);
 
@@ -188,19 +188,19 @@ class _homepageState extends State<homepage> {
                     //   height: 100,
                     //   width: 100,
                     // ),
-                    // Container(
-                    //   width: 64,
-                    //   height: 64,
-                    //   decoration: BoxDecoration(
-                    //       image: DecorationImage(
-                    //           image: NetworkImage(
-                    //               (iconId == null ? "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg" : iconId)
-                    //             // "https:///cdn.weatherapi.com/weather/64x64/day/116.png"
-                    //             // "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
-                    //           )
-                    //       )
-                    //   ),
-                    // ),
+                    Container(
+                      width: 64,
+                      height: 64,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: NetworkImage(
+                                  (iconId == null ? "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg" : iconId)
+                                // "https:///cdn.weatherapi.com/weather/64x64/day/116.png"
+                                // "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
+                              )
+                          )
+                      ),
+                    ),
                     Text((currentCityName == null ? "loading" : currentCityName),
                         style: TextStyle(
                             fontSize: 30
@@ -245,7 +245,7 @@ class _homepageState extends State<homepage> {
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
-
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Column(
                             mainAxisAlignment: MainAxisAlignment.start,
